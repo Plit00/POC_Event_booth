@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>TIMER</title>
+	<script type="text/javascript">
+
+		var queryString = window.location.search;
+ 		var varArray = queryString.split("&"); 	
+
+ 	
+ 		var unique_num = varArray[0].split("=");
+ 		var problem_id = varArray[1].split("=");
+		var timer,sec;
+
+		switch(problem_id[1])
+		{
+			case '1':
+			sec = 600; //10분
+			break;
+
+			case '2':
+			sec = 600; //10분
+			break;
+
+			case '3':
+			sec = 900; //15분
+			break;
+		}
+
+function start(){
+ timer = self.setInterval('decrement()', 1000);
+}
+
+function decrement(){
+ sec--;
+ m = Math.floor(sec/ 60) + "m " + (sec % 60) + "s";
+ document.getElementById('time_out').innerHTML = m;
+}
+function stop(){
+ // clearInterval : setInterval을 멈출 때 사용
+ clearInterval(timer);
+ timer = null;
+}
+function reset(){
+	stop();
+	sec = 0
+	document.getElementById('time_out').innerHTML = (sec / divide);
+}
+function save(){
+ 	var queryString = window.location.search;    
+	location.href="time_save.php?time=" + sec + "&unique_num="+unique_num[1]+"&problem_id="+problem_id[1];
+}
+</script>
+</head>
+
+<body>
+	
+	<span id="time_out">0.00</span>
+	<br />
+	
+	<br />
+	<button id="start_timer" onclick="start()">Start</button>
+	<button id="stop_timer" onclick="stop()">Stop</button>
+	<button id="reset_timer" onclick="reset()">Reset</button>
+	<br/>
+	<button onclick="save()">Save</button>
+
+</body>
+
+</html>

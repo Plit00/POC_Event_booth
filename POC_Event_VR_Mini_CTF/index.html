@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>POC-EVENT VR HACKING CTF</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/modern-business.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.php">VR MINI CTF</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.php">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Problem
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="Testing_Your_Memory_Power.php?problem_id=1">Testing_Your_Memory_Power</a>
+              <a class="dropdown-item" href="Spooky_Calling.php?problem_id=2">Spooky_Calling</a>
+              <a class="dropdown-item"href="INFINITE_Boss.php?problem_id=3">INFINITE_Boss</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Rank
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="mainchallege.php">Main Rank</a>
+
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <?php
+              echo $_SESSION['user_id'];
+              ?>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <?php
+              echo "<a class='dropdown-item' href='Unique_num_chk.php?user_name=".$_SESSION['user_id']."'>"."My Unique Number"."</a>";
+              ?>
+              <!-- <a class="dropdown-item" href="Unique_num_chk.php?user_name=">My Unique Number</a> -->
+              <a class="dropdown-item" href="Logout.php">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- 사진을 시발 넣자 친구야 넣자 넣자  -->
+        <div class="carousel-item active" style="background-image: url('./image/main.png')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Main</h3>
+            <p>VR MINI CTF</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <h1 class="my-4">Welcome to VR GAME HACKING CTF CHALLEGE</h1>
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>The Rules</h2>
+        <p><b>#Challege List#</b></p>
+        <ul>
+          <li>#1 Testing Your Memory Power <b>(10 minutes)</b></li>
+          <li>#2 Spooky Calling <b>(10 minutes)</b></li>
+          <li>#3 INFINITE Boss <b>(15 minutes)</b></li>
+          <li>#4 Sub mission <b>(
+There is no fixed time. If you want to solve it, tell the staff.)</b></li>
+        </ul>
+        <p>For information about each game, go to About menu.</p>
+        <p><b>#How to Solve#</b></p>
+        <ul>
+          <li><b>Main challenge</b></li>
+          <li>We have the basic tools to solve the problem.<br/>
+              Tools required are downloadable.</li>
+          <li>Scores are reduced by one point every 10 seconds from the start of problem solving.</li>
+          <li>If you can't solve the problem in time, your score is zero.</li>
+          <li><b>If you understand everything, please inform administrator that you are ready.</b></li><br>
+
+          <li><b>Sub Mission [[New challenge]]</b></li>
+          <li>There are 25 words in total, so if you memorize the words here,<br/>
+          you will get 1 point for each number</li>
+          <li>If you find the word, please call the event staff! I will confirm.</li>
+        </ul>
+
+        <p><b>#문제 풀이 방법#</b></p>
+        <ul>
+          <li><b>Main challenge</b></li>
+          <li>문제풀이에 필요한 기본적인 툴들만 갖춰져있는 상태입니다.<br/>
+              추가로 필요한 툴들은 다운로드하여 사용하시면 됩니다.</li>
+          <li>점수는 문제 풀이 시작 후, 10초가 지날 때 마다 1점씩 감소됩니다.</li>
+          <li>만약 주어진 시간 내에 문제를 풀지 못하면 0점 처리됩니다.</li>
+          <li><b>모든 내용을 이해했다면, 운영진에게 준비가 되었음을 알려주세요!</b></li><br>
+
+          <li><b>Sub mission[[New challenge]]</b></li>
+          <li>총 25단어가 있습니다, 단어를 기억하신다면 한단어당 1점을 얻게됩니다.</li>
+          <li>단어를 찾으신다면 이벤트 운영진을 불러주세요! 확인해드리겠습니다.</li>
+
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <img class="img-fluid rounded" src="주소" alt="">
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Call to Action Section -->
+    <div class="row mb-4">
+      <div class="col-md-8">
+        <p>Have fun! :)</p>
+      </div>
+      <div class="col-md-4">
+        <a class="btn btn-lg btn-secondary btn-block" href="#">~</a>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">POC EVENT &copy; Team SCP</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
